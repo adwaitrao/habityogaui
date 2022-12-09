@@ -1,7 +1,14 @@
-// $("#mobile_code").intlTelInput({
-//   initialCountry: "in",
-//   separateDialCode: true,
-// });
+let JoinNowMain = document
+  .getElementById("join_now_main")
+  .addEventListener("click", () => {
+    console.log("main btn clicked");
+  });
+
+let JoinNowModal = document
+  .getElementById("join_now_modal")
+  .addEventListener("click", () => {
+    console.log("modal btn clicked");
+  });
 $("#carouselExampleControls")
   .carousel({})
   .on("slide.bs.carousel", function () {
@@ -13,22 +20,21 @@ $("#carouselExampleControls")
     document.getElementById("video6").pause();
   });
 
-$('.carousel').carousel({
+$(".carousel").carousel({
   interval: 8000,
 });
 
-$('.inp-parent input').focusin(function(){
-  if ($(window).width() < 767){
-    $('.inp-parent').css("margin-top","30px")
+$(".inp-parent input").focusin(function () {
+  if ($(window).width() < 767) {
+    $(".inp-parent").css("margin-top", "30px");
   }
-})
+});
 
-$('.inp-parent input').focusout(function(){
-  if ($(window).width() < 767){
-    $('.inp-parent').css("margin-top","0px")
+$(".inp-parent input").focusout(function () {
+  if ($(window).width() < 767) {
+    $(".inp-parent").css("margin-top", "0px");
   }
-})
-
+});
 
 var input = document.querySelector("#mobile_code");
 window.intlTelInput(input, {
